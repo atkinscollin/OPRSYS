@@ -1,7 +1,7 @@
 
 bb_init()
 
-bb_getattr(path="/.Trash", statbuf=0xb6bff104)
+bb_getattr(path="/.Trash", statbuf=0xb7509104)
     bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/.Trash", fpath = "/home/collin/os/fuse-lab10/b/.Trash"
     ERROR bb_getattr lstat: No such file or directory
     st_dev = 0
@@ -18,51 +18,17 @@ bb_getattr(path="/.Trash", statbuf=0xb6bff104)
     st_mtime = 0x00000000
     st_ctime = 0x00000000
 
-bb_opendir(path="/", fi=0xb6bff134)
+bb_opendir(path="/", fi=0xb7509134)
     bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
     flags = 0x00018800
     fh_old = 0x00000000
     writepage = 0
     direct_io = 0
     keep_cache = 0
-    fh = 0xffffffffb62006e8
+    fh = 0xffffffffb6c006e8
     lock_owner = 0x0000000000000000
 
-bb_getattr(path="/.xdg-volume-info", statbuf=0xb6bff104)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/.xdg-volume-info", fpath = "/home/collin/os/fuse-lab10/b/.xdg-volume-info"
-    ERROR bb_getattr lstat: No such file or directory
-    st_dev = 0
-    st_ino = 0
-    st_mode = 00
-    st_nlink = 0
-    st_uid = 0
-    st_gid = 0
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 0
-    st_blocks = 0
-    st_atime = 0x00000000
-    st_mtime = 0x00000000
-    st_ctime = 0x00000000
-
-bb_getattr(path="/autorun.inf", statbuf=0xb7554104)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/autorun.inf", fpath = "/home/collin/os/fuse-lab10/b/autorun.inf"
-    ERROR bb_getattr lstat: No such file or directory
-    st_dev = 0
-    st_ino = 0
-    st_mode = 00
-    st_nlink = 0
-    st_uid = 0
-    st_gid = 0
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 0
-    st_blocks = 0
-    st_atime = 0x00000000
-    st_mtime = 0x00000000
-    st_ctime = 0x00000000
-
-bb_getattr(path="/.Trash-1000", statbuf=0xb61ff104)
+bb_getattr(path="/.Trash-1000", statbuf=0xb6bdd104)
     bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/.Trash-1000", fpath = "/home/collin/os/fuse-lab10/b/.Trash-1000"
     ERROR bb_getattr lstat: No such file or directory
     st_dev = 0
@@ -79,771 +45,24 @@ bb_getattr(path="/.Trash-1000", statbuf=0xb61ff104)
     st_mtime = 0x00000000
     st_ctime = 0x00000000
 
-bb_readdir(path="/", buf=0xb6200590, filler=0xb774de80, offset=0, fi=0xb61ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/test.txt", statbuf=0xb61ff104)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/test.txt", fpath = "/home/collin/os/fuse-lab10/b/test.txt"
-    st_dev = 2049
-    st_ino = 1602299
-    st_mode = 0100664
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
+bb_getattr(path="/.xdg-volume-info", statbuf=0xb7509104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/.xdg-volume-info", fpath = "/home/collin/os/fuse-lab10/b/.xdg-volume-info"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
     st_rdev = 0
-    st_size = 22
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x565cfbd5
-    st_mtime = 0x564b9f5d
-    st_ctime = 0x564e3092
-
-bb_getattr(path="/yaknow.txt", statbuf=0xb61ff104)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
-    st_dev = 2049
-    st_ino = 1602306
-    st_mode = 0100664
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 45
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x565d024a
-    st_mtime = 0x564e2e94
-    st_ctime = 0x564e3092
-
-bb_getattr(path="/yaknow.txt~", statbuf=0xb61ff104)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt~", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt~"
-    st_dev = 2049
-    st_ino = 1602305
-    st_mode = 0100664
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 37
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x564e3092
-    st_mtime = 0x564b9f8f
-    st_ctime = 0x564e3092
-
-bb_releasedir(path="/", fi=0xb61ff134)
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb61ff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5800638
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb58004e0, filler=0xb774de80, offset=0, fi=0xb61ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb5800638
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5800638
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb61ff134)
-    flags = 0x00000000
-    fh_old = 0xb5800638
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5800638
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb61ff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5800638
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb58004e0, filler=0xb774de80, offset=0, fi=0xb61ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb5800638
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5800638
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb6bff134)
-    flags = 0x00000000
-    fh_old = 0xb5800638
-    writepage = 0
-
-bb_opendir(path="/", fi=0xb61ff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5808b68
-    lock_owner = 0x0000000000000000
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5800638
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb5800530, filler=0xb774de80, offset=0, fi=0xb61ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb5808b68
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5808b68
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb7554134)
-    flags = 0x00000000
-    fh_old = 0xb5808b68
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5808b68
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb61ff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5800a90
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb58004e0, filler=0xb774de80, offset=0, fi=0xb6bff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb5800a90
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5800a90
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb6bff134)
-    flags = 0x00000000
-    fh_old = 0xb5800a90
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5800a90
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb7554134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c007d0
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6c00678, filler=0xb774de80, offset=0, fi=0xb57ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb6c007d0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c007d0
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb6bff134)
-    flags = 0x00000000
-    fh_old = 0xb6c007d0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c007d0
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb7554134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c00718
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6c006c8, filler=0xb774de80, offset=0, fi=0xb61ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb6c00718
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c00718
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb6bff134)
-    flags = 0x00000000
-    fh_old = 0xb6c00718
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c00718
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb6bff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6200590, filler=0xb774de80, offset=0, fi=0xb7554124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb7554134)
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb7554134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c007d0
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6c00678, filler=0xb774de80, offset=0, fi=0xb7554124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb6c007d0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c007d0
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb7554134)
-    flags = 0x00000000
-    fh_old = 0xb6c007d0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c007d0
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb7554134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c007d0
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6c00678, filler=0xb774de80, offset=0, fi=0xb7554124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb6c007d0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c007d0
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb7554134)
-    flags = 0x00000000
-    fh_old = 0xb6c007d0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c007d0
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb7554134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c007d0
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6c00678, filler=0xb774de80, offset=0, fi=0xb7554124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb6c007d0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c007d0
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb6bff134)
-    flags = 0x00000000
-    fh_old = 0xb6c007d0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c007d0
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb6bff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6200590, filler=0xb774de80, offset=0, fi=0xb57ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb6bff134)
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb6bff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6200590, filler=0xb774de80, offset=0, fi=0xb57ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb7554134)
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb6bff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6200738
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb62005e0, filler=0xb774de80, offset=0, fi=0xb61ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb6200738
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6200738
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb6bff134)
-    flags = 0x00000000
-    fh_old = 0xb6200738
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6200738
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb6bff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6200590, filler=0xb774de80, offset=0, fi=0xb61ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb6bff134)
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb6bff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6200590, filler=0xb774de80, offset=0, fi=0xb61ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb6bff134)
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb6bff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6200590, filler=0xb774de80, offset=0, fi=0xb61ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb6bff134)
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb6bff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6200590, filler=0xb774de80, offset=0, fi=0xb61ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb6bff134)
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb6bff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6200590, filler=0xb774de80, offset=0, fi=0xb61ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb6bff134)
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb6bff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6200590, filler=0xb774de80, offset=0, fi=0xb61ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb61ff134)
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb61ff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5800638
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb58004e0, filler=0xb774de80, offset=0, fi=0xb6bff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb5800638
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5800638
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb61ff134)
-    flags = 0x00000000
-    fh_old = 0xb5800638
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb5800638
-    lock_owner = 0x0000000000000000
-
-bb_opendir(path="/", fi=0xb6bff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6200590, filler=0xb774de80, offset=0, fi=0xb57ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb6bff134)
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/autorun.inf", statbuf=0xb6bff104)
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/autorun.inf", statbuf=0xb6bdd104)
     bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/autorun.inf", fpath = "/home/collin/os/fuse-lab10/b/autorun.inf"
     ERROR bb_getattr lstat: No such file or directory
     st_dev = 0
@@ -860,56 +79,21 @@ bb_getattr(path="/autorun.inf", statbuf=0xb6bff104)
     st_mtime = 0x00000000
     st_ctime = 0x00000000
 
-bb_getattr(path="/", statbuf=0xb57ff0f4)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    st_dev = 2049
-    st_ino = 1601742
-    st_mode = 040775
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x565cfbce
-    st_mtime = 0x564e30c6
-    st_ctime = 0x564e30c6
-
-bb_opendir(path="/", fi=0xb7554134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c007d0
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6c00678, filler=0xb774de80, offset=0, fi=0xb61ff124)
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb7509124)
 calling filler with name .
 calling filler with name test.txt
 calling filler with name yaknow.txt
 calling filler with name yaknow.txt~
 calling filler with name ..
     flags = 0x00000000
-    fh_old = 0xb6c007d0
+    fh_old = 0xb6c006e8
     writepage = 0
     direct_io = 0
     keep_cache = 0
-    fh = 0xffffffffb6c007d0
+    fh = 0xffffffffb6c006e8
     lock_owner = 0x0000000000000000
 
-bb_releasedir(path="/", fi=0xb57ff134)
-    flags = 0x00000000
-    fh_old = 0xb6c007d0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb6c007d0
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/test.txt", statbuf=0xb7554104)
+bb_getattr(path="/test.txt", statbuf=0xb7509104)
     bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/test.txt", fpath = "/home/collin/os/fuse-lab10/b/test.txt"
     st_dev = 2049
     st_ino = 1602299
@@ -925,132 +109,7 @@ bb_getattr(path="/test.txt", statbuf=0xb7554104)
     st_mtime = 0x564b9f5d
     st_ctime = 0x564e3092
 
-bb_getattr(path="/", statbuf=0xb61ff0f4)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    st_dev = 2049
-    st_ino = 1601742
-    st_mode = 040775
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x565cfbce
-    st_mtime = 0x564e30c6
-    st_ctime = 0x564e30c6
-
-bb_opendir(path="/", fi=0xb6bff134)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    flags = 0x00018800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_readdir(path="/", buf=0xb6200590, filler=0xb774de80, offset=0, fi=0xb57ff124)
-calling filler with name .
-calling filler with name test.txt
-calling filler with name yaknow.txt
-calling filler with name yaknow.txt~
-calling filler with name ..
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_releasedir(path="/", fi=0xb61ff134)
-    flags = 0x00000000
-    fh_old = 0xb62006e8
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0xffffffffb62006e8
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/", statbuf=0xb6bff0f4)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
-    st_dev = 2049
-    st_ino = 1601742
-    st_mode = 040775
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x565cfbce
-    st_mtime = 0x564e30c6
-    st_ctime = 0x564e30c6
-
-bb_open(path"/test.txt", fi=0xb57ff1c0)
-    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/test.txt", fpath = "/home/collin/os/fuse-lab10/b/test.txt"
-    flags = 0x00008000
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000000000005
-    lock_owner = 0x0000000000000000
-
-bb_read(path="/test.txt", buf=0xb6c00780, size=4096, offset=0, fi=0xb75541b0)
-    flags = 0x00008000
-    fh_old = 0x00000005
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000000000005
-    lock_owner = 0x0000000000000000
-
-   legal user 1000 accessing file
-bb_fgetattr(path="/test.txt", statbuf=0xb61ff0f4, fi=0xb61ff1c0)
-    flags = 0x00000000
-    fh_old = 0x00000005
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000000000005
-    lock_owner = 0x0000000000000000
-    st_dev = 2049
-    st_ino = 1602299
-    st_mode = 0100664
-    st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 22
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x565cfbd5
-    st_mtime = 0x564b9f5d
-    st_ctime = 0x564e3092
-
-bb_flush(path="/test.txt", fi=0xb6bff1c0)
-    flags = 0x00000000
-    fh_old = 0x00000005
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000000000005
-    lock_owner = 0x86e02117f824da1f
-
-bb_release(path="/test.txt", fi=0xb57ff1b0)
-    flags = 0x00008000
-    fh_old = 0x00000005
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000000000005
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/yaknow.txt", statbuf=0xb7554104)
+bb_getattr(path="/yaknow.txt", statbuf=0xb6bdd104)
     bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
     st_dev = 2049
     st_ino = 1602306
@@ -1066,7 +125,1190 @@ bb_getattr(path="/yaknow.txt", statbuf=0xb7554104)
     st_mtime = 0x564e2e94
     st_ctime = 0x564e3092
 
-bb_getattr(path="/text.txt", statbuf=0xb61ff104)
+bb_getattr(path="/yaknow.txt~", statbuf=0xb7509104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt~", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt~"
+    st_dev = 2049
+    st_ino = 1602305
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 37
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565d0b85
+    st_mtime = 0x564b9f8f
+    st_ctime = 0x564e3092
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bdd134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6200638
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb62004e0, filler=0xb7702e80, offset=0, fi=0xb7509124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6200638
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6200638
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6200638
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6200638
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/autorun.inf", statbuf=0xb7509104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/autorun.inf", fpath = "/home/collin/os/fuse-lab10/b/autorun.inf"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/", statbuf=0xb6bdd0f4)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    st_dev = 2049
+    st_ino = 1601742
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565dcb0d
+    st_mtime = 0x565dc9de
+    st_ctime = 0x565dc9de
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bdd134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/yaknow.txt", statbuf=0xb7509104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    st_dev = 2049
+    st_ino = 1602306
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 45
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565d024a
+    st_mtime = 0x564e2e94
+    st_ctime = 0x564e3092
+
+bb_getattr(path="/yaknow.txt~", statbuf=0xb6bdd104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt~", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt~"
+    st_dev = 2049
+    st_ino = 1602305
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 37
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565d0b85
+    st_mtime = 0x564b9f8f
+    st_ctime = 0x564e3092
+
+bb_getattr(path="/", statbuf=0xb75090f4)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    st_dev = 2049
+    st_ino = 1601742
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565dcb0d
+    st_mtime = 0x565dc9de
+    st_ctime = 0x565dc9de
+
+bb_opendir(path="/", fi=0xb6bdd134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6200638
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb62004e0, filler=0xb7702e80, offset=0, fi=0xb7509124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6200638
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6200638
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6200638
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6200638
+    lock_owner = 0x0000000000000000
+
+bb_open(path"/yaknow.txt", fi=0xb6bdd1c0)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_read(path="/yaknow.txt", buf=0xb6c006c0, size=4096, offset=0, fi=0xb75091b0)
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+Legal user 1000 accessing file.
+bb_fgetattr(path="/yaknow.txt", statbuf=0xb6bdd0f4, fi=0xb6bdd1c0)
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    st_dev = 2049
+    st_ino = 1602306
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 45
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565d024a
+    st_mtime = 0x564e2e94
+    st_ctime = 0x564e3092
+
+bb_flush(path="/yaknow.txt", fi=0xb75091c0)
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x4db9b69c7a17f016
+
+bb_release(path="/yaknow.txt", fi=0xb6bdd1b0)
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xb75090f4)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    st_dev = 2049
+    st_ino = 1601742
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565dcb0d
+    st_mtime = 0x565dc9de
+    st_ctime = 0x565dc9de
+
+bb_opendir(path="/", fi=0xb6bdd134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6200638
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb62004e0, filler=0xb7702e80, offset=0, fi=0xb7509124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6200638
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6200638
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6200638
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6200638
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/yaknow.txt", statbuf=0xb6bdd104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    st_dev = 2049
+    st_ino = 1602306
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 45
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565d024a
+    st_mtime = 0x564e2e94
+    st_ctime = 0x564e3092
+
+bb_getattr(path="/yaknow.txt~", statbuf=0xb7509104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt~", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt~"
+    st_dev = 2049
+    st_ino = 1602305
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 37
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565d0b85
+    st_mtime = 0x564b9f8f
+    st_ctime = 0x564e3092
+
+bb_getattr(path="/", statbuf=0xb6bdd0f4)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    st_dev = 2049
+    st_ino = 1601742
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565dcb0d
+    st_mtime = 0x565dc9de
+    st_ctime = 0x565dc9de
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bdd134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/yaknow.txt", statbuf=0xb7509104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    st_dev = 2049
+    st_ino = 1602306
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 45
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565d024a
+    st_mtime = 0x564e2e94
+    st_ctime = 0x564e3092
+
+bb_getattr(path="/", statbuf=0xb6bdd0f4)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    st_dev = 2049
+    st_ino = 1601742
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565dcb0d
+    st_mtime = 0x565dc9de
+    st_ctime = 0x565dc9de
+
+bb_open(path"/yaknow.txt", fi=0xb75091c0)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_access(path="/yaknow.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+
+bb_read(path="/yaknow.txt", buf=0xb6c006c0, size=4096, offset=0, fi=0xb75091b0)
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+Legal user 1000 accessing file.
+bb_getattr(path="/yaknow.txt", statbuf=0xb6bdd0f4)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    st_dev = 2049
+    st_ino = 1602306
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 45
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565d024a
+    st_mtime = 0x564e2e94
+    st_ctime = 0x564e3092
+
+bb_flush(path="/yaknow.txt", fi=0xb75091c0)
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x924529d4c3f04aad
+
+bb_release(path="/yaknow.txt", fi=0xb6bdd1b0)
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_access(path="/yaknow.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+
+bb_access(path="/yaknow.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+
+bb_getattr(path="/newdoc.txt", statbuf=0xb7509104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/newdoc.txt", fpath = "/home/collin/os/fuse-lab10/b/newdoc.txt"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/yaknow.txt", statbuf=0xb6bdd104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    st_dev = 2049
+    st_ino = 1602306
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 45
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565d024a
+    st_mtime = 0x564e2e94
+    st_ctime = 0x564e3092
+
+bb_getattr(path="/text.txt", statbuf=0xb7509104)
     bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/text.txt", fpath = "/home/collin/os/fuse-lab10/b/text.txt"
     ERROR bb_getattr lstat: No such file or directory
     st_dev = 0
@@ -1083,7 +1325,26 @@ bb_getattr(path="/text.txt", statbuf=0xb61ff104)
     st_mtime = 0x00000000
     st_ctime = 0x00000000
 
-bb_getattr(path="/", statbuf=0xb6bff0f4)
+bb_access(path="/yaknow.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+
+bb_getattr(path="/yaknow.txt", statbuf=0xb7509104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    st_dev = 2049
+    st_ino = 1602306
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 45
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565d024a
+    st_mtime = 0x564e2e94
+    st_ctime = 0x564e3092
+
+bb_getattr(path="/", statbuf=0xb6bdd0f4)
     bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
     st_dev = 2049
     st_ino = 1601742
@@ -1095,8 +1356,554 @@ bb_getattr(path="/", statbuf=0xb6bff0f4)
     st_size = 4096
     st_blksize = 4096
     st_blocks = 8
-    st_atime = 0x565cfbce
-    st_mtime = 0x564e30c6
-    st_ctime = 0x564e30c6
+    st_atime = 0x565dcb0d
+    st_mtime = 0x565dc9de
+    st_ctime = 0x565dc9de
 
-bb_destroy(userdata=0x084b7008)
+bb_getattr(path="/yaknow.txt", statbuf=0xb7509104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    st_dev = 2049
+    st_ino = 1602306
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 45
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565d024a
+    st_mtime = 0x564e2e94
+    st_ctime = 0x564e3092
+
+bb_open(path"/yaknow.txt", fi=0xb6bdd1c0)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    flags = 0x00028002
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/.goutputstream-JJ4K8X", statbuf=0xb7509104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/.goutputstream-JJ4K8X", fpath = "/home/collin/os/fuse-lab10/b/.goutputstream-JJ4K8X"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_create(path="/.goutputstream-JJ4K8X", mode=0100664, fi=0xb6bdd1b0)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/.goutputstream-JJ4K8X", fpath = "/home/collin/os/fuse-lab10/b/.goutputstream-JJ4K8X"
+    flags = 0x000080c1
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+bb_fgetattr(path="/.goutputstream-JJ4K8X", statbuf=0xb6bdd0c4, fi=0xb6bdd1b0)
+    flags = 0x000080c1
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    st_dev = 2049
+    st_ino = 1605449
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x565dcb52
+    st_mtime = 0x565dcb52
+    st_ctime = 0x565dcb52
+
+bb_getxattr(path = "/.goutputstream-JJ4K8X", name = "security.capability", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/.goutputstream-JJ4K8X", fpath = "/home/collin/os/fuse-lab10/b/.goutputstream-JJ4K8X"
+    ERROR bb_getxattr lgetxattr: No data available
+
+bb_chown(path="/.goutputstream-JJ4K8X", uid=1000, gid=1000)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/.goutputstream-JJ4K8X", fpath = "/home/collin/os/fuse-lab10/b/.goutputstream-JJ4K8X"
+
+bb_getattr(path="/.goutputstream-JJ4K8X", statbuf=0xb6bdd074)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/.goutputstream-JJ4K8X", fpath = "/home/collin/os/fuse-lab10/b/.goutputstream-JJ4K8X"
+    st_dev = 2049
+    st_ino = 1605449
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x565dcb52
+    st_mtime = 0x565dcb52
+    st_ctime = 0x565dcb52
+
+bb_chmod(fpath="/.goutputstream-JJ4K8X", mode=0100664)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/.goutputstream-JJ4K8X", fpath = "/home/collin/os/fuse-lab10/b/.goutputstream-JJ4K8X"
+
+Legal user 1000 accessing file.
+Mod Authorized.
+
+bb_getattr(path="/.goutputstream-JJ4K8X", statbuf=0xb7509074)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/.goutputstream-JJ4K8X", fpath = "/home/collin/os/fuse-lab10/b/.goutputstream-JJ4K8X"
+    st_dev = 2049
+    st_ino = 1605449
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x565dcb52
+    st_mtime = 0x565dcb52
+    st_ctime = 0x565dcb52
+
+bb_flush(path="/yaknow.txt", fi=0xb6bdd1c0)
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x924529d4c3f04aad
+
+bb_release(path="/yaknow.txt", fi=0xb75091b0)
+    flags = 0x00028002
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_getxattr(path = "/.goutputstream-JJ4K8X", name = "security.capability", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/.goutputstream-JJ4K8X", fpath = "/home/collin/os/fuse-lab10/b/.goutputstream-JJ4K8X"
+    ERROR bb_getxattr lgetxattr: No data available
+
+bb_write(path="/.goutputstream-JJ4K8X", buf=0xb750a058, size=63, offset=0, fi=0xb7509244)
+    flags = 0x00008001
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+Legal user 1000 accessing file.
+Write Authorized.
+
+bb_fsync(path="/.goutputstream-JJ4K8X", datasync=0, fi=0xb6bdd1c0)
+    flags = 0x00000000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/yaknow.txt~", statbuf=0xb7509104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt~", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt~"
+    st_dev = 2049
+    st_ino = 1602305
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 37
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565d0b85
+    st_mtime = 0x564b9f8f
+    st_ctime = 0x564e3092
+bb_unlink(path="/yaknow.txt~")
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt~", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt~"
+
+bb_getattr(path="/yaknow.txt~", statbuf=0xb6bdd104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt~", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt~"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_link(path="/yaknow.txt", newpath="/yaknow.txt~")
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt~", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt~"
+
+bb_getattr(path="/yaknow.txt~", statbuf=0xb6bdd104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt~", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt~"
+    st_dev = 2049
+    st_ino = 1602306
+    st_mode = 0100664
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 45
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565d024a
+    st_mtime = 0x564e2e94
+    st_ctime = 0x565dcb52
+
+bb_rename(fpath="/.goutputstream-JJ4K8X", newpath="/yaknow.txt")
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/.goutputstream-JJ4K8X", fpath = "/home/collin/os/fuse-lab10/b/.goutputstream-JJ4K8X"
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+
+bb_getattr(path="/yaknow.txt", statbuf=0xb75090f4)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    st_dev = 2049
+    st_ino = 1605449
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 63
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565dcb52
+    st_mtime = 0x565dcb52
+    st_ctime = 0x565dcb52
+
+bb_flush(path="/yaknow.txt", fi=0xb6bdd1c0)
+    flags = 0x00000000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x924529d4c3f04aad
+
+bb_release(path="/yaknow.txt", fi=0xb75091b0)
+    flags = 0x00008001
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xb75090f4)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    st_dev = 2049
+    st_ino = 1601742
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565dcb0d
+    st_mtime = 0x565dcb52
+    st_ctime = 0x565dcb52
+
+bb_access(path="/yaknow.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+
+bb_access(path="/yaknow.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+
+bb_access(path="/yaknow.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+
+bb_access(path="/yaknow.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+
+bb_getattr(path="/yaknow.txt", statbuf=0xb6bdd104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    st_dev = 2049
+    st_ino = 1605449
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 63
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565dcb52
+    st_mtime = 0x565dcb52
+    st_ctime = 0x565dcb52
+
+bb_access(path="/yaknow.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+
+bb_access(path="/yaknow.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+
+bb_getattr(path="/newdoc.txt", statbuf=0xb7509104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/newdoc.txt", fpath = "/home/collin/os/fuse-lab10/b/newdoc.txt"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/text.txt", statbuf=0xb6bdd104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/text.txt", fpath = "/home/collin/os/fuse-lab10/b/text.txt"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/", statbuf=0xb75090f4)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    st_dev = 2049
+    st_ino = 1601742
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565dcb0d
+    st_mtime = 0x565dcb52
+    st_ctime = 0x565dcb52
+
+bb_getattr(path="/", statbuf=0xb6bdd0f4)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    st_dev = 2049
+    st_ino = 1601742
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565dcb0d
+    st_mtime = 0x565dcb52
+    st_ctime = 0x565dcb52
+
+bb_opendir(path="/", fi=0xb7509134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb7702e80, offset=0, fi=0xb6bdd124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb7509134)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/yaknow.txt", statbuf=0xb6bdd104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    st_dev = 2049
+    st_ino = 1605449
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 63
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565dcb52
+    st_mtime = 0x565dcb52
+    st_ctime = 0x565dcb52
+
+bb_getattr(path="/yaknow.txt~", statbuf=0xb7509104)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt~", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt~"
+    st_dev = 2049
+    st_ino = 1602306
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 45
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565d024a
+    st_mtime = 0x564e2e94
+    st_ctime = 0x565dcb52
+
+bb_getattr(path="/", statbuf=0xb61ff0f4)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    st_dev = 2049
+    st_ino = 1601742
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565dcb5b
+    st_mtime = 0x565dcb52
+    st_ctime = 0x565dcb52
+
+bb_opendir(path="/", fi=0xb6bdd134)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/", fpath = "/home/collin/os/fuse-lab10/b/"
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6200720
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb62005c8, filler=0xb7702e80, offset=0, fi=0xb7509124)
+calling filler with name .
+calling filler with name test.txt
+calling filler with name yaknow.txt
+calling filler with name yaknow.txt~
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6200720
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6200720
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bdd134)
+    flags = 0x00000000
+    fh_old = 0xb6200720
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6200720
+    lock_owner = 0x0000000000000000
+
+bb_open(path"/yaknow.txt", fi=0xb75091c0)
+    bb_fullpath:  rootdir = "/home/collin/os/fuse-lab10/b", path = "/yaknow.txt", fpath = "/home/collin/os/fuse-lab10/b/yaknow.txt"
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_read(path="/yaknow.txt", buf=0xb5800610, size=4096, offset=0, fi=0xb61ff1b0)
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+Legal user 1000 accessing file.
+bb_fgetattr(path="/yaknow.txt", statbuf=0xb6bdd0f4, fi=0xb6bdd1c0)
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    st_dev = 2049
+    st_ino = 1605449
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 63
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x565dcb5c
+    st_mtime = 0x565dcb52
+    st_ctime = 0x565dcb52
+
+bb_flush(path="/yaknow.txt", fi=0xb75091c0)
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x535e93d6b58e8a88
+
+bb_release(path="/yaknow.txt", fi=0xb61ff1b0)
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_destroy(userdata=0x09049008)

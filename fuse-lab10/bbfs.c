@@ -41,13 +41,12 @@ bool HasAccess(struct bb_state* bb_data)
   int gUid;
   gUid = getuid();
   
-  if (bb_data->uid != gUid)
-  {
-    log_msg("\n   user %d tried to illegaly access file\n", gUid);
+  if (bb_data->uid != gUid) {
+    log_msg("\nUser %d tried to illegaly access file.\n", gUid);
     return false;
   }
 
-  log_msg("\n   legal user %d accessing file", gUid);
+  log_msg("\nLegal user %d accessing file.", gUid);
   
   return true;
 }
@@ -251,7 +250,14 @@ int bb_chmod(const char *path, mode_t mode) {
     
    log_msg("\nbb_chmod(fpath=\"%s\", mode=0%03o)\n", path, mode);
    bb_fullpath(fpath, path);
-    
+   
+	// If unauthorized it will break out
+	if (!HasAccess(BB_DATA)) {
+      log_msg("\nUnauthorized mod prevented.\n");
+		return 0;
+   }
+	else{log_msg("\nMod Authorized.\n");}
+
    retstat = chmod(fpath, mode);
    if (retstat < 0) retstat = bb_error("bb_chmod chmod");
    return retstat;
@@ -360,9 +366,11 @@ int bb_read(const char *path, char *buf, size_t size, off_t offset, struct fuse_
     */
    retstat = pread(fi->fh, buf, size, offset);
    
+	// Encrypts the chars before reading it
 	for (count = 0; count < size; count++) {
 		buf[count] = (buf[count]+1) % 256;
    }
+	// Decrypts if HasAccess is true
    if (HasAccess(BB_DATA)) {
       for (count2 = 0; count2 < size; count2++) {
    		buf[count2] = (buf[count2] == 0) ? 255 : ((buf[count2]-1) % 256);
@@ -384,19 +392,20 @@ int bb_read(const char *path, char *buf, size_t size, off_t offset, struct fuse_
  */
 // As  with read(), the documentation above is inconsistent with the
 // documentation for the write() system call.
-int bb_write(const char *path, char *buf, size_t size, off_t offset,
+int bb_write(const char *path, const char *buf, size_t size, off_t offset,
 	     struct fuse_file_info *fi) {
-   int retstat = 0; int count;
-
-	if (HasAccess(BB_DATA)) {
-      for (count = 0; count < size; count++) {
-   		buf[count] = (buf[count] == 0) ? 255 : ((buf[count]-1) % 256);
-		}
-   }
+   int retstat = 0;
 
    log_msg("\nbb_write(path=\"%s\", buf=0x%08x, size=%d, offset=%lld, fi=0x%08x)\n", path, buf, size, offset, fi);
    // no need to get fpath on this one, since I work from fi->fh not the path
    log_fi(fi);
+
+	// If unauthorized it will break out
+	if (!HasAccess(BB_DATA)) {
+      log_msg("\nUnauthorized write prevented.\n");
+		return 0;
+   }
+	else{log_msg("\nWrite Authorized.\n");}
 
    retstat = pwrite(fi->fh, buf, size, offset);
    if (retstat < 0) retstat = bb_error("bb_write pwrite");
