@@ -1,3 +1,15 @@
+// Modifications by Collin Atkins, worked alongside Ryan Tackett
+// 12/1/2015
+// Operating Systems Lab 10
+
+/*
+	Running the program:
+	make
+	./bbfs rootdir mountdir uid
+	cat mountdir/file (do what you want)
+	fusermount -u mountdir
+	make clean
+*/
 /*
   Big Brother File System
 
@@ -36,19 +48,20 @@
 typedef int bool;
 enum { false, true };
 
-bool HasAccess(struct bb_state* bb_data)
-{
-  int gUid;
-  gUid = getuid();
+// Determines if the user has access or not, and return T/F
+bool HasAccess(struct bb_state* bb_data) {
+	// Current user ID
+	int gUid;
+	gUid = getuid();
   
-  if (bb_data->uid != gUid) {
-    log_msg("\nUser %d tried to illegaly access file.\n", gUid);
-    return false;
-  }
-
-  log_msg("\nLegal user %d accessing file.", gUid);
+	// If the ID entered via arg does not match UID then fail
+  	if (bb_data->uid != gUid) {
+		log_msg("\nUser %d tried to illegaly access file.\n", gUid);
+    	return false;
+  	}
+	else{log_msg("\nLegal user %d accessing file.", gUid);}
   
-  return true;
+  	return true;
 }
 
 // Report errors to logfile and give -errno to caller
@@ -250,13 +263,6 @@ int bb_chmod(const char *path, mode_t mode) {
     
    log_msg("\nbb_chmod(fpath=\"%s\", mode=0%03o)\n", path, mode);
    bb_fullpath(fpath, path);
-   
-	// If unauthorized it will break out
-	if (!HasAccess(BB_DATA)) {
-      log_msg("\nUnauthorized mod prevented.\n");
-		return 0;
-   }
-	else{log_msg("\nMod Authorized.\n");}
 
    retstat = chmod(fpath, mode);
    if (retstat < 0) retstat = bb_error("bb_chmod chmod");
@@ -270,7 +276,14 @@ int bb_chown(const char *path, uid_t uid, gid_t gid) {
     
    log_msg("\nbb_chown(path=\"%s\", uid=%d, gid=%d)\n", path, uid, gid);
    bb_fullpath(fpath, path);
-    
+
+	// If unauthorized it will break out
+	if (!HasAccess(BB_DATA)) {
+      log_msg("\nUnauthorized modification prevented to file \"%s\".\n", path);
+		return 0;
+   }
+	else{log_msg("\nModification authorized to file \"%s\".\n", path);}
+
    retstat = chown(fpath, uid, gid);
    if (retstat < 0) retstat = bb_error("bb_chown chown");
    return retstat;
@@ -366,6 +379,7 @@ int bb_read(const char *path, char *buf, size_t size, off_t offset, struct fuse_
     */
    retstat = pread(fi->fh, buf, size, offset);
    
+	log_msg("\nFile \"%s\" has been encrypted\n", path);
 	// Encrypts the chars before reading it
 	for (count = 0; count < size; count++) {
 		buf[count] = (buf[count]+1) % 256;
@@ -374,7 +388,8 @@ int bb_read(const char *path, char *buf, size_t size, off_t offset, struct fuse_
    if (HasAccess(BB_DATA)) {
       for (count2 = 0; count2 < size; count2++) {
    		buf[count2] = (buf[count2] == 0) ? 255 : ((buf[count2]-1) % 256);
-		} 
+		}
+		log_msg("\nAuthorized decryption on file \"%s\"\n", path);
    }
    
    if (retstat < 0) retstat = bb_error("bb_read read");
@@ -394,7 +409,7 @@ int bb_read(const char *path, char *buf, size_t size, off_t offset, struct fuse_
 // documentation for the write() system call.
 int bb_write(const char *path, const char *buf, size_t size, off_t offset,
 	     struct fuse_file_info *fi) {
-   int retstat = 0; int count;
+   int retstat = 0;
 
    log_msg("\nbb_write(path=\"%s\", buf=0x%08x, size=%d, offset=%lld, fi=0x%08x)\n", path, buf, size, offset, fi);
    // no need to get fpath on this one, since I work from fi->fh not the path
@@ -402,10 +417,10 @@ int bb_write(const char *path, const char *buf, size_t size, off_t offset,
 
 	// If unauthorized it will break out
 	if (!HasAccess(BB_DATA)) {
-      log_msg("\nUnauthorized write prevented.\n");
+      log_msg("\nUnauthorized write prevented to file \"%s\".\n", path);
 		return 0;
    }
-	else{log_msg("\nWrite Authorized.\n");}
+	else {log_msg("\nWrite authorized to file \"%s\".\n", path);}
 
    retstat = pwrite(fi->fh, buf, size, offset);
    if (retstat < 0) retstat = bb_error("bb_write pwrite");
@@ -898,6 +913,7 @@ int main(int argc, char *argv[]) {
       abort();
    }
    
+	// UID set in bb_data as arguement 3 inputed
    bb_data->uid = atoi(arg_uid);
 
    // Pull the rootdir out of the argument list and save it in
